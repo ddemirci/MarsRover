@@ -27,24 +27,25 @@ namespace MarsRover
 
         }
 
-        public RoboticRover(int cX, int cY, int bX, int bY, char direction, List<char> instructions)
+        public RoboticRover(int[] borders, int[] coordinates, 
+            char direction, List<char> instructions)
         {
-            SetBorders(bX, bY);
-            SetRoverPosition(cX, cY);
+            SetBorders(borders);
+            SetRoverPosition(coordinates);
             SetDirection(direction);
             SetInstructions(instructions);
         }
 
-        private void SetBorders(int _x, int _y)
+        private void SetBorders(int[] borders)
         {
-            BorderX = _x;
-            BorderY = _y;
+            BorderX = borders[0];
+            BorderY = borders[1];
         }
 
-        private void SetRoverPosition(int _x, int _y)
+        private void SetRoverPosition(int[] coordinates)
         {
-            CoordinateX = _x;
-            CoordinateY = _y;
+            CoordinateX = coordinates[0];
+            CoordinateY = coordinates[1];
         }
 
         private void SetDirection(char direction)
@@ -75,7 +76,7 @@ namespace MarsRover
 
         public void ReadInstructions()
         {
-            foreach(var inst in Instructions)
+            foreach (var inst in Instructions)
             {
                 switch (inst)
                 {
@@ -88,7 +89,7 @@ namespace MarsRover
                     case 'R':
                         RotateRight();
                         break;
-                    default:
+                    default: //Invalid Instruction
                         break;
                 }
             }

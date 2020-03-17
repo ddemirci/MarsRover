@@ -6,7 +6,6 @@
         public void Move()
         {
             if (!CanMove()) return;
-
             switch (Direction)
             {
                 case IDirection.East:

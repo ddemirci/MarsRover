@@ -48,6 +48,7 @@
     <Compile Include="RoboticRover.cs" />
     <Compile Include="RoboticRover.Movement.cs" />
     <Compile Include="NasaInput.cs" />
+    <Compile Include="RoverInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

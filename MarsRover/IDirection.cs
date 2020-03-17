@@ -1,6 +1,6 @@
 ﻿namespace MarsRover
 {
-    public enum IDirection
+    public enum IDirection : byte
     {
         North = 1,
         East = 2,
