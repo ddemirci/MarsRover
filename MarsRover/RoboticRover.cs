@@ -20,7 +20,7 @@ namespace MarsRover
         public IDirection Direction { get; set; }
 
         //Instructions given to the RoboticRover
-        List<char> Instructions { get; set; }
+        public List<char> Instructions { get; set; }
 
         public RoboticRover()
         {
